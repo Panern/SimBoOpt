@@ -1,0 +1,30 @@
+# scientific notation is not supported! e.g., 1e4 should be 10000, 1e-2==>0.01!
+
+
+type: ML #or DL
+num_BoOpt: 10 # iteration number of BoOpt
+random_seed: 12345 #
+Ex_name: "MAGC" # Experimental name
+cf_opt:
+  guiding:
+    guiding_bool: False #Ture for test given g_paras, works only  when type is ML
+    g_paras: # This para.  guiding is True
+      alpha:
+        !!python/int
+        1000
+      gama:
+        !!python/int
+        -2
+  pbounds: # This para. works only when guiding is False
+    alpha:
+      !!python/tuple
+      [0.001, 10000]
+    gama:
+      !!python/tuple
+      [-5, -1]
+  # This paras gives paras of DL model, e.g., lr, momentum, num_epochs and e.t.c.., it works only when type is DL
+  parameters:
+    !!python/list
+    [{"name" : "lr", "type" : "range", "bounds" : [0.000001, 0.4], "log_scale" : True},{"name" : "momentum", "type" : "range", "bounds" : [0.0, 1.0]},{"name" : "num_epochs", "type" : "range", "bounds" : [1, 50]}]
+
+
