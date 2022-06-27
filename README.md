@@ -22,7 +22,7 @@ do this TrainAndEvaluate
 ## Examples
 We have two examples of SimBoOpt: 
 1. DL: CNN for classifaction of Minist 
-2. ML: MAGC-based(paper: [Multi-view Attributed Graph Clustering](https://ieeexplore.ieee.org/abstract/document/9508843) for attributed graph clustering on ACM
+2. ML: MAGC-based(paper: [Multi-view Attributed Graph Clustering](https://ieeexplore.ieee.org/abstract/document/9508843) for attributed graph clustering on ACM datasets
 
 ## Dependencies
 1. Numpy
